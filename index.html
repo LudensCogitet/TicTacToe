@@ -1,59 +1,58 @@
 <html>
-<head>
-<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-<link href="main.css" rel="stylesheet">
-</head>
-<body>
-<div id="console"></div>
-<div id='UI'>
-  <span id="screen1">
-    <span>Computer opponent?</span><p></p>
-    <span class="UIButton screenBtn1">YES</span>
-    <span class="UIButton screenBtn1">NO</span>
-  </span>
-  <span id="screen2">
-    <span style="display: none;">Will player 1 be Xs or Os?</span><p style="display: none;"></p>
-    <span class='UIButton screenBtn2' style="display: none;">X</span>
-    <span class='UIButton screenBtn2' style="display: none;">O</span>
-  </span>
-  <span id="screen2_1">
-    <span style="display: none;">Who will go first?</span><p style="display: none;"></p>
-    <span class='UIButton screenBtn2_1' style="display: none;">player 1</span>
-    <span class='UIButton screenBtn2_1' style="display: none;">player 2</span>
-  </span>
-  <span id="screen3">
-    <p style="display: none;"></p>
-    <span class='UIButton screenBtn3' style="display: none;">Click to restart.</span>
-    <p style="display: none;"></p>
-  </span>
-</div>
-<div style="text-align: center;">
-  <div style="display: inline-block;">
-    <table>
-      <tr>
-        <td class="square"><canvas class="canvas" id="topLeft" width="100" height="100"></canvas></td>
-        <td class="square"><canvas class="canvas" id="topMid" width="100" height="100"></canvas></td>
-        <td class="square"><canvas class="canvas" id="topRight" width="100" height="100"></canvas></td>
-      </tr>
-      <tr>
-        <td class="square"><canvas class="canvas" id="midLeft" width="100" height="100"></canvas></td>
-        <td class="square"><canvas class="canvas" id="midMid" width="100" height="100"></canvas></td>
-        <td class="square"><canvas class="canvas" id="midRight" width="100" height="100"></canvas></td>
-      </tr>
-      <tr>
-        <td class="square"><canvas class="canvas" id="botLeft" width="100" height="100"></canvas></td>
-        <td class="square"><canvas class="canvas" id="botMid" width="100" height="100"></canvas></td>
-        <td class="square"><canvas class="canvas" id="botRight" width="100" height="100"></canvas></td>
-      </tr>
-    </table>
-    <div style="text-align: center; width: 326px;">
-      <div><canvas id="indicator" width="100" height="100"></canvas></div>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="console"></div>
+    <div id='UI'>
+      <span id="screen1">
+        <span>Computer opponent?</span><p></p>
+        <span class="UIButton screenBtn1">YES</span>
+        <span class="UIButton screenBtn1">NO</span>
+      </span>
+      <span id="screen2">
+        <span style="display: none;">Will player 1 be Xs or Os?</span><p style="display: none;"></p>
+        <span class='UIButton screenBtn2' style="display: none;">X</span>
+        <span class='UIButton screenBtn2' style="display: none;">O</span>
+      </span>
+      <span id="screen2_1">
+        <span style="display: none;">Who will go first?</span><p style="display: none;"></p>
+        <span class='UIButton screenBtn2_1' style="display: none;">player 1</span>
+        <span class='UIButton screenBtn2_1' style="display: none;">player 2</span>
+      </span>
+      <span id="screen3">
+        <p style="display: none;"></p>
+        <span class='UIButton screenBtn3' style="display: none;">Click to restart.</span>
+        <p style="display: none;"></p>
+      </span>
     </div>
-  </div>
-</div>
-</div>
-<script src='jquery-3.1.1.min.js'></script>
-<script src='consoleWriter.js'></script>
-<script src='main.js'></script>
-</body>
+    <div style="text-align: center;">
+      <div style="display: inline-block;">
+        <table>
+          <tr>
+            <td class="square"><canvas class="canvas" id="topLeft" width="100" height="100"></canvas></td>
+            <td class="square"><canvas class="canvas" id="topMid" width="100" height="100"></canvas></td>
+            <td class="square"><canvas class="canvas" id="topRight" width="100" height="100"></canvas></td>
+          </tr>
+          <tr>
+            <td class="square"><canvas class="canvas" id="midLeft" width="100" height="100"></canvas></td>
+            <td class="square"><canvas class="canvas" id="midMid" width="100" height="100"></canvas></td>
+            <td class="square"><canvas class="canvas" id="midRight" width="100" height="100"></canvas></td>
+          </tr>
+          <tr>
+            <td class="square"><canvas class="canvas" id="botLeft" width="100" height="100"></canvas></td>
+            <td class="square"><canvas class="canvas" id="botMid" width="100" height="100"></canvas></td>
+            <td class="square"><canvas class="canvas" id="botRight" width="100" height="100"></canvas></td>
+          </tr>
+        </table>
+        <div style="text-align: center; width: 326px;">
+          <div><canvas id="indicator" width="100" height="100"></canvas></div>
+        </div>
+      </div>
+    </div>
+    <script src='jquery-3.1.1.min.js'></script>
+    <script src='consoleWriter.js'></script>
+    <script src='main.js'></script>
+  </body>
 </html>

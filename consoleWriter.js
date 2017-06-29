@@ -12,6 +12,9 @@ function consoleWriter(targetDiv, numMessagesToSave = 3) {
   // It is essentially a wrapper for the write() function, which is a wrapper for a loop() function called using
   // setTimeout().
   // The purpose of this wrapper is so that these objects can be stored in consoleWriter's queue for later activation.
+
+  // Numbers encountered between '~' characters in the text string will be interpreted as a length of time in milliseconds the writer should wait before continuing to write.
+  // An 'N' encountered after a pair of '~' characters will be interpreted as a new line and will immediately add a <p> tag to the console div.
   function writer(text, speed, callback = null) {
     var wait = false;
     this.write = function() {
@@ -36,7 +39,8 @@ function consoleWriter(targetDiv, numMessagesToSave = 3) {
           } else {
             timeoutID = setTimeout(loop, 1);
           }
-        } else if (textArr[i] == '~') {
+        }
+        else if (textArr[i] == '~') {
           var comString = text.slice(i + 1);
           var endOfCom = comString.indexOf('~');
           comString = comString.slice(0, endOfCom);
@@ -50,7 +54,8 @@ function consoleWriter(targetDiv, numMessagesToSave = 3) {
           wait = true;
           waitUntil = Date.now() + parseInt(comString);
           timeoutID = setTimeout(loop, 1);
-        } else {
+        }
+        else {
           $("#console").append(textArr[i])
           i++;
           if (i < textArr.length)
